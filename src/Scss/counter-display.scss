@@ -1,0 +1,10 @@
+section {
+  .counter-display {
+    display: flex;
+    justify-content: space-evenly;
+    font-family: $terminalFont1;
+    p {
+      margin-top: 2px;
+    }
+  }
+}
