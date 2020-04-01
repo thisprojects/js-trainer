@@ -6,20 +6,14 @@ import MapPreviousEntries from "./MapPreviousEntries";
 
 const Console = () => {
   const textValue = React.useRef();
-  const consoleRef = React.useRef();
 
   const [previousEntries, updatepreviousEntries] = React.useState([]);
   const dispatch = useDispatch();
 
-  const scrollToBottom = ref =>
-    (ref.current.scrollTop = ref.current.scrollHeight);
-
   React.useEffect(() => {
     textValue.current.value = "";
     textValue.current.focus();
-    scrollToBottom(consoleRef);
-
-  }, [ textValue, consoleRef, scrollToBottom ]);
+  }, [ previousEntries ]);
 
   const handleKeyPress = e => {
     if (e.key === "Enter") {
@@ -41,7 +35,7 @@ const Console = () => {
   };
 
   return (
-    <section className="console" ref={ consoleRef }>
+    <section className="console">
       <MapPreviousEntries previousEntries={ previousEntries } />
       <div className="input-prompt">
         <Prompt />

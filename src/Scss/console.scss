@@ -24,6 +24,7 @@ section {
     .previous-entries {
       display: flex;
       flex-direction: column;
+      overflow: scroll;
       justify-content: flex-start;
     }
   }
