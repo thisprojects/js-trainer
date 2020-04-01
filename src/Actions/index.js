@@ -8,4 +8,4 @@ export const displayCurrentMethodDescription = description => ({
   payload: description
 });
 
-export const decrementType = (type) => ({type: `DECREMENT_${type}`})
+export const decrementType = (type) => ({ type: `DECREMENT_${type}` })

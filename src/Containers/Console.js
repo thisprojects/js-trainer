@@ -1,8 +1,8 @@
 import React from "react";
-import Prompt from "./Prompt";
+import Prompt from "../Components/Prompt";
 import { useDispatch } from "react-redux";
-import { addExecutedMethod } from "./../Actions";
-import MapPreviousEntries from "./MapPreviousEntries";
+import { addExecutedMethod } from "../Actions";
+import MapPreviousEntries from "../Components/MapPreviousEntries";
 
 const Console = () => {
   const textValue = React.useRef();
@@ -36,7 +36,7 @@ const Console = () => {
 
   return (
     <section className="console">
-      <MapPreviousEntries previousEntries={ previousEntries } />
+      <MapPreviousEntries scrollContainer={ "previous-entries" } array={ previousEntries }  />
       <div className="input-prompt">
         <Prompt />
         <input

@@ -7,7 +7,7 @@ const MethodDescription = () => {
   );
   return (
     <section className="text-properties method-description">
-      <p>{description}</p>
+      <p>{ description }</p>
     </section>
   );
 };
