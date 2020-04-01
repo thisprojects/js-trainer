@@ -27,7 +27,7 @@ const MethodChecklist = () => {
 
   const dispatch = useDispatch();
 
-  const [methods, updateMethods] = React.useState([]);
+  const [methods, updateMethodList] = React.useState([]);
 
   React.useEffect(() => {
     let foundMethod = findMethod(executedMethod);
@@ -36,7 +36,7 @@ const MethodChecklist = () => {
       foundMethod &&
       !methods.includes(`${foundMethod.type}: ${foundMethod.method}`)
     ) {
-      updateMethods(methods =>
+      updateMethodList(methods =>
         methods.concat(`${foundMethod.type}: ${foundMethod.method}`)
       );
       dispatch(displayCurrentMethodDescription(foundMethod.description));
