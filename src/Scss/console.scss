@@ -1,0 +1,30 @@
+section {
+  .console {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: #1f1f1f;
+    margin: 10px 0px 0px 10px;
+    padding: 5px;
+    height: 520px;
+    border: 1px solid green;
+    flex: 1 1 80%;
+    overflow: scroll;
+    font-family: $terminalFont2;
+    input {
+      width: 80%;
+      background-color: #1f1f1f;
+      border: none;
+      outline: none;
+      font-family: $terminalFont2;
+      &:hover {
+        outline: none;
+      }
+    }
+    .previous-entries {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  }
+}

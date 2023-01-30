@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css?family=Do+Hyeon|Revalia&display=swap");
+
+$terminalFont1: "Do Hyeon", sans-serif;
+$terminalFont2: monospace;
+
+body {
+  margin: 0;
+  font-family: $terminalFont1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #1f1f1f;
+}
+
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+span {
+  padding: 1px;
+}
+
+section {
+  .console-column {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.text-properties {
+  color: #00cc00;
+  font-size: 1.5em;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@import "./Scss/console.scss";
+@import "./Scss/counter-display.scss";
+@import "./Scss/method-list.scss";
+@import "./Scss/header.scss";
+@import "./Scss/method-description.scss";
+
+@media screen and (max-width: 1050px) {
+  .text-properties {
+    font-size: 1em;
+  }
+  .method-list-wrapper {
+    flex-basis: 40%;
+  }
+  section .console {
+    flex-basis: 60%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .text-properties {
+    font-size: 0.8em;
+  }
+  .method-list-wrapper {
+    flex-basis: 50%;
+  }
+  section .console {
+    flex-basis: 50%;
+    input {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .text-properties {
+    font-size: 0.6em;
+  }
+}
